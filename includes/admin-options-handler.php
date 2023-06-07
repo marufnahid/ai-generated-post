@@ -1,10 +1,11 @@
 <?php
+if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
 // Register the admin option page
 function aignpost_admin_option_page() {
 	add_menu_page(
 		__( 'AIGN Post', 'aignpost' ),
-		__( 'AIGN Post', 'aignpost' ),
+        'AIGN Post',
 		'manage_options',
 		'aignpost-dashboard',
 		'aignpost_admin_tab',
@@ -12,7 +13,7 @@ function aignpost_admin_option_page() {
 		20
 	);
 
-	add_submenu_page(
+    add_submenu_page(
 		'aignpost-dashboard',
 		__( 'Settings', 'aignpost' ),
 		__( 'Settings', 'aignpost' ),
@@ -36,6 +37,54 @@ function aignpost_admin_tab() {
     <div class="wrap">
         <h2><?php echo esc_html( get_admin_page_title() ); ?></h2>
 
+
+            <style>
+                .plugin-instructions {
+                    max-width: 600px;
+                    margin: 0 auto;
+                    padding: 20px;
+                    background-color: #f7f7f7;
+                    border: 1px solid #ddd;
+                    border-radius: 4px;
+                }
+
+                .plugin-instructions h2 {
+                    font-size: 24px;
+                    margin-top: 0;
+                }
+
+                .plugin-instructions p {
+                    font-size: 16px;
+                    line-height: 1.5;
+                }
+
+                .plugin-instructions ul {
+                    margin: 10px 0;
+                    padding-left: 20px;
+                }
+
+                .plugin-instructions li {
+                    font-size: 16px;
+                    line-height: 1.5;
+                }
+            </style>
+            <div class="plugin-instructions">
+                        <h2>Instructions for using the Plugin</h2>
+
+                        <p>Follow the steps below to make the most of the plugin:</p>
+
+                        <ol>
+                            <li>Navigate to the <strong>Plugin Settings</strong> page from the WordPress sidebar menu.</li>
+                            <li>Configure the <strong>API KEY</strong> options and settings according to your requirements.</li>
+                            <li>Save the changes.</li>
+                            <li>Go to the <strong>Generate Post</strong> to create post content.</li>
+                            <li>Give a <strong>title</strong> and select others necessary  option then click on <strong>Publish</strong> </li>
+                            <li>Check the plugin documentation for more advanced usage and customization options.</li>
+                        </ol>
+
+                        <p>If you encounter any issues or need further assistance, please consult the <a href="https://marufnahid.me" target="_blank">Plugin Documentation</a> or contact our support team.</p>
+                    </div>
+
     </div>
 	<?php
 }
@@ -47,7 +96,7 @@ function aignpost_settings_tab() {
         <div class="container-fluid margin-top-30">
             <div class="row">
                 <div class="column column-50 offset-50">
-                    <form method="post" action="<?php echo admin_url( 'admin-post.php' ); ?>" novalidate="novalidate">
+                    <form method="post" action="<?php echo esc_url(admin_url( 'admin-post.php' )); ?>" novalidate="novalidate">
                         <div class="row">
                             <div class="column">
 								<?php
@@ -123,7 +172,7 @@ function aignpost_generate_post_tab() {
         <div class="container-fluid margin-top-30">
             <div class="row">
                 <div class="column column-25">
-                    <form action="<?php echo admin_url( 'admin-post.php' ); ?>" method="post">
+                    <form action="<?php echo esc_url(admin_url( 'admin-post.php' )); ?>" method="post">
                         <fieldset>
 							<?php
 							wp_nonce_field( 'aign_generate_post', 'gnrt_nonce' );
@@ -209,7 +258,7 @@ function aignpost_generate_post_tab() {
                     </form>
                 </div>
                 <div class="column column-75">
-                    <form action="<?php echo admin_url( 'admin-post.php' ); ?>" method="post">
+                    <form action="<?php echo esc_url(admin_url( 'admin-post.php' )); ?>" method="post">
                         <div class="row">
                             <div class="column column-75">
 

@@ -1,6 +1,8 @@
 <?php
 
-require PLUGIN_DIR_PATH . 'vendor/autoload.php';
+if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
+
+require AIGN_PLUGIN_DIR_PATH . 'vendor/autoload.php';
 
 use Orhanerday\OpenAi\OpenAi;
 
@@ -141,7 +143,7 @@ function aignpost_insert_post() {
 				delete_transient( 'aignpost_complete_body' );
 				wp_redirect( "admin.php?page=aignpost-generate" );
 			} else {
-				echo $post_id->get_error_message();
+				echo esc_html($post_id->get_error_message());
 			}
 		}
 	}

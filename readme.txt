@@ -1,13 +1,12 @@
-=== AIGNPost- AI Generated WordPress Post.  ===
+=== AI Generated Post ===
 Contributors: Maruf
 Donate link: https://marufnahid.me/donate
 Tags: AI, gpt-3, chatgpt, content-writing, ai-writer, post-generator
 Requires at least: 5.6
-Tested up to: 6.1
-Stable tag: trunk
-Requires PHP: 5.4
-License: GPLv2 or later
-License URI: https://www.gnu.org/licenses/gpl-2.0.html
+Tested up to: 6.2.2
+Stable tag: 1.0.0
+Requires PHP: 7.3
+License: GPLv3
 
 #1 WordPress AI generated plugin. Only by writing simple word you can create your blog an posted to your WordPress site. This plugin is also fully AI powered plugin.
 
@@ -115,7 +114,7 @@ Yes
 
 == Changelog ==
 
-= 1.0 =
+= 1.0.0 =
 Initial release of the ai-generated-post plugin.
 
 Features:
@@ -130,6 +129,6 @@ Fixed a bug that caused the plugin to crash in certain configurations.
 
 == Upgrade Notice ==
 
-= 1.0 =
+= 1.0.1 =
 
 Initial release of the ai-generated-post plugin. Allows users to generate high-quality content based on OpenAI API key.
