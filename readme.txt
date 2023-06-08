@@ -1,6 +1,6 @@
 === AI Generated Post ===
 Contributors: Maruf
-Donate link: https://marufnahid.me/donate
+Donate link: https://marufnahid.me/donate.html
 Tags: AI, gpt-3, chatgpt, content-writing, ai-writer, post-generator
 Requires at least: 5.6
 Tested up to: 6.2.2
@@ -126,9 +126,5 @@ Publish generated content directly to your WordPress website.
 Bug fixes:
 
 Fixed a bug that caused the plugin to crash in certain configurations.
-
-== Upgrade Notice ==
-
-= 1.0.1 =
 
 Initial release of the ai-generated-post plugin. Allows users to generate high-quality content based on OpenAI API key.

@@ -1,13 +1,13 @@
 <?php
 /**
- * Plugin Name:       AI Generated Post
+ * Plugin Name:       AI Generated Post For WordPress
  * Plugin URI:        https://github.com/marufnahid/ai-generated-post
  * Description:       This is a plugin for WordPress for creating post, writing content for your blog post, social post, buddypress post , forum post etc.
  * Author:            Maruf
  * Author URI:        https://marufnahid.me
  * Version:           1.0.0
- * Text Domain:       aignpost
- * Domain Path:       /languages/
+ * Text Domain:       ai-generated-post
+ * Domain Path:       /languages
  * License:           GPLv3
  * Requires PHP:      7.3
  * Requires at least: 5.6
@@ -27,7 +27,7 @@ class AIGN_Post {
 	}
 
 	function aignpost_plugins_loaded() {
-		load_plugin_textdomain( 'aignpost', false, plugin_dir_url( __FILE__ ) . "/languages" );
+		load_plugin_textdomain( 'ai-generated-post', false, plugin_dir_url( __FILE__ ) . "/languages" );
 	}
 
 	function aignpost_admin_scripts( $page_hook ) {
