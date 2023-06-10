@@ -1,5 +1,5 @@
 === AI Generated Post ===
-Contributors: Maruf
+Contributors: marufnahid
 Donate link: https://marufnahid.me/donate.html
 Tags: AI, gpt-3, chatgpt, content-writing, ai-writer, post-generator
 Requires at least: 5.6
